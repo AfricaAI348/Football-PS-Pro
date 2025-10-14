@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Football PS Pro 3D</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Babylon.js CDN -->
+  <script src="https://cdn.babylonjs.com/babylon.js"></script>
+  <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
+</head>
+<body>
+  <!-- 3D game canvas -->
+  <canvas id="gameScene"></canvas>
+
+  <!-- Overlay UI -->
+  <div class="hud">
+    <div class="scoreboard">
+      <span id="teamA">Team A</span>
+      <span id="score">0 - 0</span>
+      <span id="teamB">Team B</span>
+    </div>
+    <div class="controls">
+      <button id="kickBtn">Kick</button>
+      <button id="resetBtn">Reset</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
