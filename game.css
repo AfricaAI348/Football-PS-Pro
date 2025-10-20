@@ -1,1 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    font-family: 'Courier New', monospace;
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.game-container {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    max-width: 840px;
+    width: 100%;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border: 2px solid #555;
+}
+
+.team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.team-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.score {
+    font-size: 32px;
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+.timer {
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #333;
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: 1px solid #555;
+}
+
+#gameCanvas {
+    display: block;
+    margin: 0 auto;
+    background-color: #2a5c2a;
+    border: 4px solid #555;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    touch-action: none;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    background-color: #333;
+    padding: 15px;
+    border-radius: 5px;
+    border: 2px solid #555;
+}
+
+.control-group {
+    text-align: center;
+}
+
+.control-group h3 {
+    margin-bottom: 10px;
+    color: #ffcc00;
+}
+
+.control-group p {
+    font-size: 14px;
+}
+
+.game-status {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#start-button, #install-button {
+    background: linear-gradient(to bottom, #4a752c, #2a4c1a);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 0 #1a3510;
+    margin: 5px;
+}
+
+#start-button:hover, #install-button:hover {
+    background: linear-gradient(to bottom, #5a8a3c, #3a5c2a);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 0 #1a3510;
+}
+
+#start-button:active, #install-button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #1a3510;
+}
+
+.pwa-install {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.goal-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ffcc00;
+    font-size: 36px;
+    font-weight: bold;
+    padding: 20px 40px;
+    border-radius: 10px;
+    border: 3px solid #ffcc00;
+    display: none;
+    z-index: 10;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .game-container {
+        padding: 10px;
+    }
+    
+    .scoreboard {
+        padding: 8px 15px;
+    }
+    
+    .team-name {
+        font-size: 16px;
+    }
+    
+    .score {
+        font-size: 28px;
+    }
+    
+    .timer {
+        font-size: 20px;
+    }
+    
+    #gameCanvas {
+        width: 100%;
+        height: auto;
+    }
+    
+    .controls {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* PWA install prompt styling */
+.install-prompt {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.9);
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #ffcc00;
+    z-index: 1000;
+}
+
+.install-prompt button {
+    background: #ffcc00;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 0 5px;
+}
+
+.install-prompt button:hover {
+    background: #ffd700;
+  }
