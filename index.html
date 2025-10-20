@@ -1,1 +1,51 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PS2-Style Football Game</title>
+    <meta name="description" content="A PS2-style football game with retro graphics">
+    <meta name="theme-color" content="#ffcc00">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="icons/icon-192.png">
+</head>
+<body>
+    <div class="game-container">
+        <div class="scoreboard">
+            <div class="team team-home">
+                <span class="team-name">HOME</span>
+                <span class="score" id="home-score">0</span>
+            </div>
+            <div class="timer" id="timer">90:00</div>
+            <div class="team team-away">
+                <span class="team-name">AWAY</span>
+                <span class="score" id="away-score">0</span>
+            </div>
+        </div>
+        
+        <canvas id="gameCanvas" width="800" height="500"></canvas>
+        
+        <div class="controls">
+            <div class="control-group">
+                <h3>Player 1 Controls</h3>
+                <p>Move: WASD | Kick: SPACE</p>
+            </div>
+            <div class="control-group">
+                <h3>Player 2 Controls</h3>
+                <p>Move: Arrow Keys | Kick: ENTER</p>
+            </div>
+        </div>
+        
+        <div class="game-status" id="game-status">
+            <button id="start-button">START MATCH</button>
+        </div>
+        
+        <div class="pwa-install" id="pwa-install" style="display: none;">
+            <button id="install-button">Install Game</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
